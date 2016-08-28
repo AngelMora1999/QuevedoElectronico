@@ -1,0 +1,51 @@
+<!-- Simple header with fixed tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header">
+     <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Quevedo Electrónico</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <%= link_to "Publicar", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+            <%= link_to "Ultimas Publicaciones", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+            <%= link_to "Top", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+            <%= link_to "Premiun", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+            <%= link_to "Registrarme", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+            <%= link_to "Iniciar Sesion", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+          </nav>
+      </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
+      <a href="#fixed-tab-2" class="mdl-layout__tab">Tab 2</a>
+      <a href="#fixed-tab-3" class="mdl-layout__tab">Tab 3</a>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Quevedo Electrónico</span>
+    <nav class="mdl-navigation">
+        <%= link_to "Publicar", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+        <%= link_to "Ultimas Publicaciones", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+        <%= link_to "Top", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+        <%= link_to "Premiun", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+        <%= link_to "Registrarme", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+        <%= link_to "Iniciar Sesion", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+      <div class="page-content"><!-- Your content goes here -->este es el uno</div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+      <div class="page-content"><!-- Your content goes here -->dos</div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+      <div class="page-content"><!-- Your content goes here -->tres</div>
+    </section>
+    
+  </main>
+  
+</div>
