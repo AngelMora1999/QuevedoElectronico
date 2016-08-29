@@ -1,19 +1,117 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Quevedo Electronico</title>
+    <title>Quevedo Electrónico</title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.blue_grey-pink.min.css" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.blue_grey-lime.min.css" />
     <script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
   </head>
 
   <body>
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Quevedo Electrónico</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+              <%= link_to "Publicar", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+              <%= link_to "Ultimas Publicaciones", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+              <%= link_to "Top", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+              <%= link_to "Premiun", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+              <%= link_to "Registrarme", new_user_registration_path, class:"mdl-navigation__link" %>
+              <%= link_to "Iniciar Sesion", new_user_session_path, class:"mdl-navigation__link" %>
+              <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+            </nav>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Ultimas Publicaciones</a>
+          <a href="#fixed-tab-2" class="mdl-layout__tab">Celulares Nuevos</a>
+          <a href="#fixed-tab-3" class="mdl-layout__tab">Celulares Usados</a>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Quevedo Electrónico</span>
+        <nav class="mdl-navigation">
+            <%= link_to "Registrarme", new_user_registration_path, class:"mdl-navigation__link" %>
+            <%= link_to "Iniciar Sesión", new_user_session_path, class:"mdl-navigation__link" %>
+            <%= link_to "Ultimas Publicaciones", "", class:"mdl-navigation__link" %>
+            <%= link_to "Top", "", class:"mdl-navigation__link" %>
+            <%= link_to "Premiun", "", class:"mdl-navigation__link" %>
+            <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+          <div class="page-content"></div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+          <div class="page-content"></div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+          <div class="page-content"></div>
+        </section>
+      </main>
+      <%= yield%>
+      <footer class="mdl-mega-footer">
+        <div class="mdl-mega-footer__middle-section">
+          <div class="mdl-mega-footer__drop-down-section">
+            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer__heading">Features</h1>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Updates</a></li>
+            </ul>
+          </div>
+          <div class="mdl-mega-footer__drop-down-section">
+            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer__heading">Details</h1>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">Specs</a></li>
+              <li><a href="#">Tools</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </div>
+          <div class="mdl-mega-footer__drop-down-section">
+            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer__heading">Technology</h1>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">How it works</a></li>
+              <li><a href="#">Patterns</a></li>
+              <li><a href="#">Usage</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Contracts</a></li>
+            </ul>
+          </div>
+          <div class="mdl-mega-footer__drop-down-section">
+            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+            <h1 class="mdl-mega-footer__heading">FAQ</h1>
+            <ul class="mdl-mega-footer__link-list">
+              <li><a href="#">Questions</a></li>
+              <li><a href="#">Answers</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mdl-mega-footer__bottom-section">
+          <div class="mdl-logo">Title</div>
+          <ul class="mdl-mega-footer__link-list">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Privacy & Terms</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
