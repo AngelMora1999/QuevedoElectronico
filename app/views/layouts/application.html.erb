@@ -6,12 +6,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.blue_grey-lime.min.css" />
     <script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-
   </head>
-
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
             mdl-layout--fixed-tabs">
@@ -23,13 +20,17 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
+              <%= link_to "Home", root_path, class:"mdl-navigation__link" %>
               <%= link_to "Publicar", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
-              <%= link_to "Ultimas Publicaciones", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
-              <%= link_to "Top", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
-              <%= link_to "Premiun", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
-              <%= link_to "Registrarme", new_user_registration_path, class:"mdl-navigation__link" %>
-              <%= link_to "Iniciar Sesion", new_user_session_path, class:"mdl-navigation__link" %>
-              <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+              <%= link_to "Ultimas Publicaciones", "", class:"mdl-navigation__link" %>
+              <%= link_to "Top", "", class:"mdl-navigation__link" %>
+              <%= link_to "Premiun", "", class:"mdl-navigation__link" %>
+              <% if user_signed_in? %>
+                <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+              <% else %>
+                <%= link_to "Registrarme", new_user_registration_path, class:"mdl-navigation__link" %>
+                <%= link_to "Iniciar Sesion", new_user_session_path, class:"mdl-navigation__link" %>
+              <% end %>
             </nav>
         </div>
         <!-- Tabs -->
@@ -42,12 +43,17 @@
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Quevedo Electrónico</span>
         <nav class="mdl-navigation">
-            <%= link_to "Registrarme", new_user_registration_path, class:"mdl-navigation__link" %>
-            <%= link_to "Iniciar Sesión", new_user_session_path, class:"mdl-navigation__link" %>
+            <%= link_to "Home", root_path, class:"mdl-navigation__link" %>
+            <% if user_signed_in? == false %>
+              <%= link_to "Registrarme", new_user_registration_path, class:"mdl-navigation__link" %>
+              <%= link_to "Iniciar Sesión", new_user_session_path, class:"mdl-navigation__link" %>            
+            <% end %>
             <%= link_to "Ultimas Publicaciones", "", class:"mdl-navigation__link" %>
             <%= link_to "Top", "", class:"mdl-navigation__link" %>
             <%= link_to "Premiun", "", class:"mdl-navigation__link" %>
-            <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+            <% if user_signed_in? %>
+              <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+            <% end %>
         </nav>
       </div>
       <main class="mdl-layout__content">
