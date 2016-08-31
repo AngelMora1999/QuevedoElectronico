@@ -20,16 +20,40 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
-              <%= link_to "Home", root_path, class:"mdl-navigation__link" %>
-              <%= link_to "Publicar", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
-              <%= link_to "Ultimas Publicaciones", "", class:"mdl-navigation__link" %>
-              <%= link_to "Top", "", class:"mdl-navigation__link" %>
-              <%= link_to "Premiun", "", class:"mdl-navigation__link" %>
+              <%= link_to root_path, class:"mdl-navigation__link" do %>
+                <i class="material-icons">home</i>
+                Home
+              <% end %>
+              <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
+                <i class="material-icons">publish</i>
+                Publicar
+              <% end %>
+              <%= link_to "", class:"mdl-navigation__link" do %>
+                <i class="material-icons">announcement</i>
+                Ultimas Publicaciones
+              <% end %>
+              <%= link_to "", class:"mdl-navigation__link" do %>
+                <i class="material-icons">star</i>
+                Premiun
+              <% end %>
+              <%= link_to "", class:"mdl-navigation__link" do %>
+                <i class="material-icons">looks_one</i>
+                Top
+              <% end %>
               <% if user_signed_in? %>
-                <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+                <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
+                  Cerrar Sesión
+                  <i class="material-icons">exit_to_app</i>
+                <% end %>
               <% else %>
-                <%= link_to "Registrarme", new_user_registration_path, class:"mdl-navigation__link" %>
-                <%= link_to "Iniciar Sesion", new_user_session_path, class:"mdl-navigation__link" %>
+                <%= link_to new_user_registration_path, class:"mdl-navigation__link" do %>
+                  <i class="material-icons">person_add</i>
+                  Registrarme
+                <% end %>
+                <%= link_to new_user_session_path, class:"mdl-navigation__link" do %>
+                  <i class="material-icons">exit_to_app</i>
+                  Iniciar Sesion
+                <% end %>    
               <% end %>
             </nav>
         </div>
@@ -43,16 +67,41 @@
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Quevedo Electrónico</span>
         <nav class="mdl-navigation">
-            <%= link_to "Home", root_path, class:"mdl-navigation__link" %>
-            <% if user_signed_in? == false %>
-              <%= link_to "Registrarme", new_user_registration_path, class:"mdl-navigation__link" %>
-              <%= link_to "Iniciar Sesión", new_user_session_path, class:"mdl-navigation__link" %>            
+            <%= link_to root_path, class:"mdl-navigation__link" do %>
+              <i class="material-icons">home</i>
+              Home
             <% end %>
-            <%= link_to "Ultimas Publicaciones", "", class:"mdl-navigation__link" %>
-            <%= link_to "Top", "", class:"mdl-navigation__link" %>
-            <%= link_to "Premiun", "", class:"mdl-navigation__link" %>
+            <% if user_signed_in? == false %>
+              <%= link_to new_user_session_path, class:"mdl-navigation__link" do %>
+                <i class="material-icons">exit_to_app</i>
+                Iniciar Sesion
+              <% end %>      
+              <%= link_to new_user_registration_path, class:"mdl-navigation__link" do %>
+                <i class="material-icons">person_add</i>
+                Registrarme
+              <% end %>
+            <% end %>
+            <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
+              <i class="material-icons">publish</i>
+              Publicar
+            <% end %>
+            <%= link_to "", class:"mdl-navigation__link" do %>
+              <i class="material-icons">star</i>
+              Premiun
+            <% end %>
+            <%= link_to "", class:"mdl-navigation__link" do %>
+              <i class="material-icons">looks_one</i>
+              Top
+            <% end %>
+            <%= link_to "", class:"mdl-navigation__link" do %>
+              <i class="material-icons">announcement</i>
+              Publicaciones
+            <% end %>
             <% if user_signed_in? %>
-              <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class:"mdl-navigation__link" %>
+              <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
+                Cerrar Sesión
+                <i class="material-icons">exit_to_app</i>
+              <% end %>
             <% end %>
         </nav>
       </div>
