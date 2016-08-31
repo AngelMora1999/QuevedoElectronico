@@ -4,4 +4,10 @@ class HomeController < ApplicationController
 
   def main
   end
+  
+  protected
+  def set_layout
+    return "landing" if action_name == "main"
+    super
+  end
 end

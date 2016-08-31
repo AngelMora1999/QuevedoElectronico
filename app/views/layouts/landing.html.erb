@@ -57,6 +57,12 @@
               <% end %>
             </nav>
         </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Ultimas Publicaciones</a>
+          <a href="#fixed-tab-2" class="mdl-layout__tab">Celulares Nuevos</a>
+          <a href="#fixed-tab-3" class="mdl-layout__tab">Celulares Usados</a>
+        </div>
       </header>
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Quevedo Electrónico</span>
@@ -100,8 +106,17 @@
         </nav>
       </div>
       <main class="mdl-layout__content">
-        <%= yield%>
+        <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+          <div class="page-content"></div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+          <div class="page-content"></div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+          <div class="page-content"></div>
+        </section>
       </main>
+      <%= yield%>
       <footer class="mdl-mega-footer">
         <div class="mdl-mega-footer__middle-section">
           <div class="mdl-mega-footer__drop-down-section">
