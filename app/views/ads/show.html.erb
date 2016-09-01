@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @ad.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ad.description %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @ad.brand %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @ad.price %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @ad.state %>
+</p>
+
+<p>
+  <strong>Visit count:</strong>
+  <%= @ad.visit_count %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @ad.region %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @ad.city %>
+</p>
+
+<p>
+  <strong>Cellphone:</strong>
+  <%= @ad.cellphone %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @ad.phone %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%= @ad.adress %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @ad.status %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @ad.user.name %>
+</p>
+
+<%= link_to 'Edit', edit_ad_path(@ad) %> |
+<%= link_to 'Back', ads_path %>
