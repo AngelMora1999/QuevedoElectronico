@@ -23,6 +23,8 @@ gem 'devise', github:'plataformatec/devise'
 gem 'omniauth-facebook'
 #Annotate para recordar los campos en las tablas de los modelos
 gem 'annotate'
+#Maquinas de estados AASM
+gem 'aasm', '~> 4.11'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
