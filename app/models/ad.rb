@@ -32,15 +32,24 @@ class Ad < ApplicationRecord
   	state :premiuned
   	state :selled
 
-  	event :top do 
+  	event :top do
+      after do
+        user.lock!
+      end
   		transitions from: :published, to: :toped
   	end
 
   	event :premiun do
+      after do
+        user.lock!
+      end
   		transitions from: :published, to: :premiuned
   	end
 
   	event :down do
+      after do
+        user.active!
+      end
   		transitions from: [:toped, :premiuned], to: :published
   	end
 

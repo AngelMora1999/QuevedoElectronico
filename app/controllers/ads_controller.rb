@@ -1,4 +1,5 @@
 class AdsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
 
   # GET /ads
