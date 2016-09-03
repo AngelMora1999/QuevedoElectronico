@@ -37,11 +37,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :visit_count %>
-    <%= f.number_field :visit_count %>
-  </div>
-
-  <div class="field">
     <%= f.label :region %>
     <%= f.text_field :region %>
   </div>
@@ -53,22 +48,17 @@
 
   <div class="field">
     <%= f.label :cellphone %>
-    <%= f.text_field :cellphone %>
+    <%= text_field_tag "ad[cellphone]", "#{current_user.ads.last.cellphone if current_user.ads.last.nil? == false}"  %>
   </div>
 
   <div class="field">
     <%= f.label :phone %>
-    <%= f.text_field :phone %>
+    <%= text_field_tag "ad[phone]", "#{current_user.ads.last.phone if current_user.ads.last.nil? == false}" %>
   </div>
 
   <div class="field">
     <%= f.label :adress %>
-    <%= f.text_field :adress %>
-  </div>
-
-  <div class="field">
-    <%= f.label :status %>
-    <%= f.text_field :status %>
+    <%= text_field_tag "ad[adress]", "#{current_user.ads.last.adress if current_user.ads.last.nil? == false}" %>
   </div>
 
   <div class="actions">
