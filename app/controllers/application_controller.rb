@@ -1,8 +1,14 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :set_ads
   
   layout :set_layout
-  
+
+  private
+  def set_ads
+    @ads = Ad.all
+  end
+
   protected
   def set_layout
     "application"

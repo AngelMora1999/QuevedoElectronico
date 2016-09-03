@@ -1,0 +1,43 @@
+<div class="android-drawer mdl-layout__drawer">
+<span class="mdl-layout-title">
+Quevedo Electrónico
+</span>
+<nav class="mdl-navigation">
+<%= link_to root_path, class:"mdl-navigation__link" do %>
+        <i class="material-icons">home</i>
+        Home
+      <% end %>
+      <% if user_signed_in? == false %>
+        <%= link_to new_user_session_path, class:"mdl-navigation__link" do %>
+          <i class="material-icons">exit_to_app</i>
+          Iniciar Sesion
+        <% end %>      
+        <%= link_to new_user_registration_path, class:"mdl-navigation__link" do %>
+          <i class="material-icons">person_add</i>
+          Registrarse
+        <% end %>
+      <% end %>
+      <%= link_to new_ad_path, class:"mdl-navigation__link" do %>
+        <i class="material-icons">publish</i>
+        Publicar
+      <% end %>
+      <%= link_to "", class:"mdl-navigation__link" do %>
+        <i class="material-icons">star</i>
+        Premiun
+      <% end %>
+      <%= link_to "", class:"mdl-navigation__link" do %>
+        <i class="material-icons">looks_one</i>
+        Top
+      <% end %>
+      <%= link_to "", class:"mdl-navigation__link" do %>
+        <i class="material-icons">announcement</i>
+        Publicaciones
+      <% end %>
+      <% if user_signed_in? %>
+        <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
+          Cerrar Sesión
+          <i class="material-icons">exit_to_app</i>
+        <% end %>
+      <% end %>
+</nav>
+</div>

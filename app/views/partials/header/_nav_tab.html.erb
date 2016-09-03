@@ -1,0 +1,51 @@
+<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+<div class="mdl-layout__header-row">
+<span class="android-title mdl-layout-title">
+Quevedo Electrónico
+</span>
+<!-- Add spacer, to align navigation to the right in desktop -->
+<div class="android-header-spacer mdl-layout-spacer"></div>
+<div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+</div>
+<!-- Navigation -->
+<div class="android-navigation-container">
+<nav class="android-navigation mdl-navigation">
+<%= link_to root_path, class:"mdl-navigation__link" do %>
+        <i class="material-icons">home</i>
+        Home
+      <% end %>
+      <%= link_to new_ad_path, class:"mdl-navigation__link" do %>
+        <i class="material-icons">publish</i>
+        Publicar
+      <% end %>
+      <%= link_to "", class:"mdl-navigation__link" do %>
+        <i class="material-icons">announcement</i>
+        Ultimas Publicaciones
+      <% end %>
+      <%= link_to "", class:"mdl-navigation__link" do %>
+        <i class="material-icons">star</i>
+        Premiun
+      <% end %>
+      <%= link_to "", class:"mdl-navigation__link" do %>
+        <i class="material-icons">looks_one</i>
+        Top
+      <% end %>
+      <% if user_signed_in? %>
+        <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
+          Cerrar Sesión
+          <i class="material-icons">exit_to_app</i>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_registration_path, class:"mdl-navigation__link" do %>
+          <i class="material-icons">person_add</i>
+          Registrarse
+        <% end %>
+        <%= link_to new_user_session_path, class:"mdl-navigation__link" do %>
+          <i class="material-icons">exit_to_app</i>
+          Iniciar Sesion
+        <% end %>    
+      <% end %>
+</nav>
+</div>
+</div>
+</div>

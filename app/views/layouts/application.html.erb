@@ -10,148 +10,15 @@
     <%= javascript_include_tag 'application' %>
   </head>
   <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
-            mdl-layout--fixed-tabs">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-            <!-- Title -->
-            <span class="mdl-layout-title">Quevedo Electrónico</span>
-            <!-- Add spacer, to align navigation to the right -->
-            <div class="mdl-layout-spacer"></div>
-            <!-- Navigation. We hide it in small screens. -->
-            <nav class="mdl-navigation mdl-layout--large-screen-only">
-              <%= link_to root_path, class:"mdl-navigation__link" do %>
-                <i class="material-icons">home</i>
-                Home
-              <% end %>
-              <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
-                <i class="material-icons">publish</i>
-                Publicar
-              <% end %>
-              <%= link_to "", class:"mdl-navigation__link" do %>
-                <i class="material-icons">announcement</i>
-                Ultimas Publicaciones
-              <% end %>
-              <%= link_to "", class:"mdl-navigation__link" do %>
-                <i class="material-icons">star</i>
-                Premiun
-              <% end %>
-              <%= link_to "", class:"mdl-navigation__link" do %>
-                <i class="material-icons">looks_one</i>
-                Top
-              <% end %>
-              <% if user_signed_in? %>
-                <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
-                  Cerrar Sesión
-                  <i class="material-icons">exit_to_app</i>
-                <% end %>
-              <% else %>
-                <%= link_to new_user_registration_path, class:"mdl-navigation__link" do %>
-                  <i class="material-icons">person_add</i>
-                  Registrarme
-                <% end %>
-                <%= link_to new_user_session_path, class:"mdl-navigation__link" do %>
-                  <i class="material-icons">exit_to_app</i>
-                  Iniciar Sesion
-                <% end %>    
-              <% end %>
-            </nav>
-        </div>
-      </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Quevedo Electrónico</span>
-        <nav class="mdl-navigation">
-            <%= link_to root_path, class:"mdl-navigation__link" do %>
-              <i class="material-icons">home</i>
-              Home
-            <% end %>
-            <% if user_signed_in? == false %>
-              <%= link_to new_user_session_path, class:"mdl-navigation__link" do %>
-                <i class="material-icons">exit_to_app</i>
-                Iniciar Sesion
-              <% end %>      
-              <%= link_to new_user_registration_path, class:"mdl-navigation__link" do %>
-                <i class="material-icons">person_add</i>
-                Registrarme
-              <% end %>
-            <% end %>
-            <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
-              <i class="material-icons">publish</i>
-              Publicar
-            <% end %>
-            <%= link_to "", class:"mdl-navigation__link" do %>
-              <i class="material-icons">star</i>
-              Premiun
-            <% end %>
-            <%= link_to "", class:"mdl-navigation__link" do %>
-              <i class="material-icons">looks_one</i>
-              Top
-            <% end %>
-            <%= link_to "", class:"mdl-navigation__link" do %>
-              <i class="material-icons">announcement</i>
-              Publicaciones
-            <% end %>
-            <% if user_signed_in? %>
-              <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
-                Cerrar Sesión
-                <i class="material-icons">exit_to_app</i>
-              <% end %>
-            <% end %>
-        </nav>
-      </div>
-      <main class="mdl-layout__content">
-        <%= yield%>
-      </main>
-      <footer class="mdl-mega-footer">
-        <div class="mdl-mega-footer__middle-section">
-          <div class="mdl-mega-footer__drop-down-section">
-            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer__heading">Features</h1>
-            <ul class="mdl-mega-footer__link-list">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Partners</a></li>
-              <li><a href="#">Updates</a></li>
-            </ul>
-          </div>
-          <div class="mdl-mega-footer__drop-down-section">
-            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer__heading">Details</h1>
-            <ul class="mdl-mega-footer__link-list">
-              <li><a href="#">Specs</a></li>
-              <li><a href="#">Tools</a></li>
-              <li><a href="#">Resources</a></li>
-            </ul>
-          </div>
-          <div class="mdl-mega-footer__drop-down-section">
-            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer__heading">Technology</h1>
-            <ul class="mdl-mega-footer__link-list">
-              <li><a href="#">How it works</a></li>
-              <li><a href="#">Patterns</a></li>
-              <li><a href="#">Usage</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Contracts</a></li>
-            </ul>
-          </div>
-          <div class="mdl-mega-footer__drop-down-section">
-            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer__heading">FAQ</h1>
-            <ul class="mdl-mega-footer__link-list">
-              <li><a href="#">Questions</a></li>
-              <li><a href="#">Answers</a></li>
-              <li><a href="#">Contact us</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="mdl-mega-footer__bottom-section">
-          <div class="mdl-logo">Title</div>
-          <ul class="mdl-mega-footer__link-list">
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Privacy & Terms</a></li>
-          </ul>
-        </div>
-      </footer>
-    </div>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<%= render "partials/header/nav_tab" %>
+<%= render "partials/elements/drawer" %>
+<div class="android-content mdl-layout__content">
+<a name="top"></a>
+<div class="mdl-grid">
+  <%= yield%>
+</div>
+
+<%= render "partials/footer" %>
   </body>
 </html>
