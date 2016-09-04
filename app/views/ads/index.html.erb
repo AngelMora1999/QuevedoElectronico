@@ -1,51 +1,44 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Ads</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Brand</th>
-      <th>Price</th>
-      <th>State</th>
-      <th>Visit count</th>
-      <th>Region</th>
-      <th>City</th>
-      <th>Cellphone</th>
-      <th>Phone</th>
-      <th>Adress</th>
-      <th>Status</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @ads.each do |ad| %>
-      <tr>
-        <td><%= ad.title %></td>
-        <td><%= ad.description %></td>
-        <td><%= ad.brand %></td>
-        <td><%= ad.price %></td>
-        <td><%= ad.state %></td>
-        <td><%= ad.visit_count %></td>
-        <td><%= ad.region %></td>
-        <td><%= ad.city %></td>
-        <td><%= ad.cellphone %></td>
-        <td><%= ad.phone %></td>
-        <td><%= ad.adress %></td>
-        <td><%= ad.status %></td>
-        <td><%= ad.user %></td>
-        <td><%= link_to 'Show', ad %></td>
-        <td><%= link_to 'Edit', edit_ad_path(ad) %></td>
-        <td><%= link_to 'Destroy', ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Ad', new_ad_path %>
+<% @ads.each do |ad| %>
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col"  style="color:black;">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text"><%= ad.title %></h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <h6><%= truncate(ad.description, lenght: 10) %></h6>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <h6 class="mdl-card__title-text" style="display:inline-block;"><i class="material-icons">attach_money</i><%= ad.price %>
+        </h6>
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" style="float:right;">
+            En venta
+        </button>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <h6>
+          <i class="material-icons">smartphone</i>
+          <%= ad.cellphone %>
+          <i class="material-icons">phone</i>
+          <%= ad.phone %>
+        </h6>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <h6><i class="material-icons">location_on</i><%= ad.city %>, <%= ad.region %>, Ecuador</h6>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <%= link_to ad, class:"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" do %>
+          <i class="material-icons">add</i>
+          Ver más
+        <% end %>
+        <%= link_to ad, class:"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" do %>
+          <i class="material-icons">attach_money</i>
+          Comprar
+        <% end %>
+      </div>
+      <div class="mdl-card__menu">
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+            <i class="material-icons">start</i>
+            Premiun
+        </button>
+      </div>
+    </div>
+<% end %>

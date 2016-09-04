@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+.left {
+	text-align: left;
+}
+
+.mdl-card__supporting-text {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+.demo-card-wide.mdl-card {
+
+}
+.demo-card-wide > .mdl-card__title {
+  color: black;
+  height: 200px;
+  background-image: url(http://fravega.vteximg.com.br/arquivos/ids/275446-1000-1000/CELULAR-LIBRE-SAMSUNG-GRAND-PRIME-WHITE-4G.jpg);
+  background-position: center;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
