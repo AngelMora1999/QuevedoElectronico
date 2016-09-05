@@ -11,6 +11,7 @@ class AdsController < ApplicationController
   # GET /ads/1
   # GET /ads/1.json
   def show
+    @ad.update_visit_count
   end
 
   # GET /ads/new

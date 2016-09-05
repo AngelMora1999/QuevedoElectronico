@@ -22,6 +22,7 @@
 
 class Ad < ApplicationRecord
   belongs_to :user
+  before_save :set_visit_count
 
   include AASM
 
@@ -56,5 +57,14 @@ class Ad < ApplicationRecord
   	event :sell do
   		transitions from: [:published, :toped, :premiuned], to: :selled
   	end
+  end
+
+  def update_visit_count
+    self.update(visit_count: self.visit_count + 1)
+  end
+
+  private
+  def set_visit_count
+    self.visit_count ||= 0
   end
 end
