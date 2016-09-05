@@ -59,6 +59,25 @@ class Ad < ApplicationRecord
   	end
   end
 
+  #Scopes for the ads
+  scope :premiun, ->{ where(status:"premiuned") }
+
+  scope :top, ->{ where(status:"toped") }
+
+  scope :sell, ->{ where(status:"selled") }
+
+  scope :usados, ->{ where(state:"Usado") }
+
+  scope :nuevos, ->{ where(state:"Nuevo") }
+
+  scope :economicos, ->{ order("price") }
+
+  scope :caros, ->{ order("price DESC") }
+
+  scope :populares, ->{ order("visit_count DESC") }
+  
+  scope :ultimos, ->{ order("created_at DESC") }
+
   def update_visit_count
     self.update(visit_count: self.visit_count + 1)
   end
