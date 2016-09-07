@@ -60,11 +60,13 @@ class Ad < ApplicationRecord
   end
 
   #Scopes for the ads
-  scope :premiun, ->{ where(status:"premiuned") }
+  scope :premiuns, ->{ where(status:"premiuned") }
 
-  scope :top, ->{ where(status:"toped") }
+  scope :tops, ->{ where(status:"toped") }
 
-  scope :sell, ->{ where(status:"selled") }
+  scope :selled, ->{ where(status:"selled") }
+
+  scope :activo, ->{ where(status:["premiuned", "toped", "published"]) }
 
   scope :usados, ->{ where(state:"Usado") }
 

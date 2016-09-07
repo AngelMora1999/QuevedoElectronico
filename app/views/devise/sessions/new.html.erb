@@ -1,16 +1,16 @@
 <h2>Log in</h2>
-
+  
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.label :email, "Correo electrónico", for:"user_email" ,class:"mdl-textfield__label" %><br />
+    <%= f.email_field :email, class:"mdl-textfield__input" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= f.label :password, "Contraseña", for:"user_password" ,class:"mdl-textfield__label" %><br />
+    <%= f.password_field :password, utocomplete: "off", class:"mdl-textfield__input" %>
   </div>
-
+  
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
@@ -22,5 +22,6 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
+
 
 <%= render "devise/shared/links" %>

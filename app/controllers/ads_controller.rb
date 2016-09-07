@@ -63,6 +63,39 @@ class AdsController < ApplicationController
     end
   end
 
+  #Mis metodos
+  def premiuns
+    @ads = Ad.all.ultimos.premiuns
+  end
+
+  def tops
+    @ads = Ad.all.ultimos.tops
+  end
+
+  def populares
+    @ads = Ad.all.populares.ultimos.activo
+  end
+
+  def nuevos
+    @ads = Ad.all.ultimos.nuevos.activo
+  end
+
+  def usados
+    @ads = Ad.all.ultimos.usados.activo
+  end
+
+  def economicos
+    @ads = Ad.all.ultimos.economicos.activo
+  end
+
+  def caros
+    @ads = Ad.all.ultimos.caros.activo
+  end
+
+  def vendidos
+    @ads = Ad.all.selled.ultimos
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ad

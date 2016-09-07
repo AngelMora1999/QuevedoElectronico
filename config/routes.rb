@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   resources :ads
+  #Rutas para las ads
+  get "/premiun", to: "ads#premiuns"
+  get "/top", to: "ads#tops"
+  get "/populares", to: "ads#populares"
+  get "/nuevos", to: "ads#nuevos"
+  get "/usados", to: "ads#usados"
+  get "/economicos", to: "ads#economicos"
+  get "/caros", to: "ads#caros"
+  get "/vendidos", to: "ads#vendidos"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   devise_for :users, controllers:{
