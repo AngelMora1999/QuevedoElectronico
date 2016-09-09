@@ -34,3 +34,86 @@
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
 }
+
+/* colors for the texts */
+.white-text {
+	color: #fff;
+}
+
+.black-text {
+	color: #000;
+}
+
+/* text decorations */
+.bold-text {
+	font-weight: bold;
+}
+
+.thin-text {
+	font-weight: thin;
+}
+
+/* colors */
+.gold {
+	background-color: #FFD700;
+}
+
+.black {
+	background-color: #000;
+}
+
+.back-tran {
+	background-color: rgba(0,0,0,.7);
+}
+
+.white {
+	background-color: #fff;
+}
+
+.red {
+	background-color: #f00;
+}
+
+.green-light {
+	background-color: #00FF66;
+}
+
+/* floats */
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+/* displays */
+.inline-block {
+	display: inline-block;
+}
+
+/* margins */
+
+/* paddings */
+.small-padding {
+	padding: 5px;
+}
+
+.small-padding-left {
+	padding-left: 20px;
+}
+
+/* elements */
+
+.premiun:hover {
+	background-color: #FFD700;
+	color: white;
+}
+
+.enventa:hover {
+	background-color: #00FF66;
+}
+
+.vendido:hover {
+	background-color: #f00;
+}
