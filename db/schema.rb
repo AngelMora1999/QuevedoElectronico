@@ -19,15 +19,19 @@ ActiveRecord::Schema.define(version: 20160901005925) do
     t.integer  "price"
     t.string   "state"
     t.integer  "visit_count"
-    t.string   "region",      default: "Los Riós"
-    t.string   "city",        default: "Quevedo"
+    t.string   "region",             default: "Los Riós"
+    t.string   "city",               default: "Quevedo"
     t.string   "cellphone"
     t.string   "phone"
     t.string   "adress"
     t.string   "status"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
     t.integer  "user_id"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.index ["user_id"], name: "index_ads_on_user_id"
   end
 

@@ -13,6 +13,7 @@ class CreateAds < ActiveRecord::Migration[5.0]
       t.string :phone
       t.string :adress
       t.string :status
+      t.attachment :cover
       t.references :user, foreign_key: true
 
       t.timestamps

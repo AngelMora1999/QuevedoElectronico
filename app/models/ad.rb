@@ -23,6 +23,8 @@
 class Ad < ApplicationRecord
   belongs_to :user
   before_save :set_visit_count
+  has_attached_file :cover, styles: { medium: "400*400", thumb: "200*200" }, default_url: "http://fravega.vteximg.com.br/arquivos/ids/275446-1000-1000/CELULAR-LIBRE-SAMSUNG-GRAND-PRIME-WHITE-4G.jpg"
+  validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/
 
   include AASM
 

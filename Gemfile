@@ -25,6 +25,8 @@ gem 'omniauth-facebook'
 gem 'annotate'
 #Maquinas de estados AASM
 gem 'aasm', '~> 4.11'
+#PaperClip para subir imagenes
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
