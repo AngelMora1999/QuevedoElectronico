@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   end
 
   def main
-  	@ads = Ad.all
+  	@ads = Ad.all.ultimos
   end
   
   protected

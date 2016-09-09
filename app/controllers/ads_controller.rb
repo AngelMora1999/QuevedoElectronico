@@ -1,11 +1,11 @@
 class AdsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
 
   # GET /ads
   # GET /ads.json
   def index
-    @ads = Ad.all
+    @ads = Ad.all.ultimos
   end
 
   # GET /ads/1
