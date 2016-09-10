@@ -45,7 +45,7 @@
 }
 
 .pink-text {
-	color: #FF4081;
+	color: #FF4081 !important;
 }
 
 .grey-text {
@@ -132,6 +132,10 @@
 }
 
 /* elements */
+a {
+
+	text-decoration: none;
+}
 
 .premiun:hover {
 	background-color: #FFD700;
