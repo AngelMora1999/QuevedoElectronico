@@ -3,9 +3,15 @@
 Quevedo Electrónico
 </span>
 <nav class="mdl-navigation">
-<%= link_to root_path, class:"mdl-navigation__link" do %>
+      <%= link_to root_path, class:"mdl-navigation__link" do %>
         <i class="material-icons">home</i>
         Home
+      <% end %>
+      <% if user_signed_in? %>
+        <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
+          Cerrar Sesión
+          <i class="material-icons">exit_to_app</i>
+        <% end %>
       <% end %>
       <% if user_signed_in? == false %>
         <%= link_to new_user_session_path, class:"mdl-navigation__link" do %>
@@ -32,12 +38,6 @@ Quevedo Electrónico
       <%= link_to ads_path, class:"mdl-navigation__link" do %>
         <i class="material-icons">announcement</i>
         Publicaciones
-      <% end %>
-      <% if user_signed_in? %>
-        <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
-          Cerrar Sesión
-          <i class="material-icons">exit_to_app</i>
-        <% end %>
       <% end %>
       <%= link_to populares_path, class:"mdl-navigation__link" do %>
         <i class="material-icons">public</i>
