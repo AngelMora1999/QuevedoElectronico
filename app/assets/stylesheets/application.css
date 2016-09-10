@@ -44,6 +44,14 @@
 	color: #000;
 }
 
+.pink-text {
+	color: #FF4081;
+}
+
+.grey-text {
+	color: #64FFDA;
+}
+
 /* text decorations */
 .bold-text {
 	font-weight: bold;
@@ -51,6 +59,10 @@
 
 .thin-text {
 	font-weight: thin;
+}
+
+.center-text {
+	text-align: center;
 }
 
 /* colors */
@@ -62,8 +74,8 @@
 	background-color: #000;
 }
 
-.back-tran {
-	background-color: rgba(0,0,0,.7);
+.black-fondo {
+	background-color: rgba(0,0,0,.04);
 }
 
 .white {
@@ -77,6 +89,11 @@
 .green-light {
 	background-color: #00FF66;
 }
+
+.marine {
+	background-color: #37474F;
+}
+
 
 /* floats */
 .float-right {
@@ -101,6 +118,18 @@
 
 .small-padding-left {
 	padding-left: 20px;
+}
+
+.medium-padding {
+	padding: 30px 0px;
+}
+
+.botton-padding {
+	padding-bottom: 20px;
+}
+
+.no-padding {
+	padding: 0px !important;
 }
 
 /* elements */

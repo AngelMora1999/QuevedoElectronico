@@ -1,3 +1,5 @@
+<%= render "partials/elements/banner-usados" %>
+<div class="mdl-grid">
 <% @ads.each do |ad| %>
   <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
     <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
@@ -58,3 +60,4 @@
     <% end %>
   </div>
 <% end %>
+</div>
