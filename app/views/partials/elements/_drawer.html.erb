@@ -1,5 +1,5 @@
 <div class="android-drawer mdl-layout__drawer">
-<span class="mdl-layout-title">
+<span class="mdl-layout-title marine grey-text bold-text">
 Quevedo Electrónico
 </span>
 <nav class="mdl-navigation">
@@ -38,6 +38,30 @@ Quevedo Electrónico
           Cerrar Sesión
           <i class="material-icons">exit_to_app</i>
         <% end %>
+      <% end %>
+      <%= link_to populares_path, class:"mdl-navigation__link" do %>
+        <i class="material-icons">public</i>
+        Populares
+      <% end %>
+      <%= link_to economicos_path, class:"mdl-navigation__link" do %>
+        <i class="material-icons">announcement</i>
+        Economicos
+      <% end %>
+      <%= link_to nuevos_path, class:"mdl-navigation__link" do %>
+        <i class="material-icons">announcement</i>
+        Nuevos
+      <% end %>
+      <%= link_to usados_path, class:"mdl-navigation__link" do %>
+        <i class="material-icons">announcement</i>
+        Usados
+      <% end %>
+      <%= link_to caros_path, class:"mdl-navigation__link" do %>
+        <i class="material-icons">announcement</i>
+        Mayor precio
+      <% end %>
+      <%= link_to vendidos_path, class:"mdl-navigation__link" do %>
+        <i class="material-icons">announcement</i>
+        Vendidos
       <% end %>
 </nav>
 </div>
