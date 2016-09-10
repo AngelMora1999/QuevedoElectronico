@@ -52,6 +52,10 @@
 	color: #64FFDA;
 }
 
+.marine-text {
+	color: #37474F;
+}
+
 /* text decorations */
 .bold-text {
 	font-weight: bold;
@@ -63,6 +67,11 @@
 
 .center-text {
 	text-align: center;
+}
+
+/* fonts size */
+.medium-text {
+	font-size: 1.3em !important;
 }
 
 /* colors */
@@ -108,9 +117,34 @@
 	display: inline-block;
 }
 
+.block {
+	display: block;
+}
+
+.center {
+	margin: 0 auto;
+	display: block;
+}
+
 /* margins */
+.big-margin {
+	margin: 30px 0px;
+}
+
+.bottom-margin{
+	margin-bottom: 0px;
+	display: block;
+}
 
 /* paddings */
+.padding {
+	padding: 0px 20px;
+}
+
+.big-padding {
+	padding: 30px 0px;
+}
+
 .small-padding {
 	padding: 5px;
 }
@@ -123,6 +157,14 @@
 	padding: 30px 0px;
 }
 
+.medium-left-padding {
+	padding-left: 40px;
+}
+
+.small-padding {
+	padding: 20px 0px;
+}
+
 .botton-padding {
 	padding-bottom: 20px;
 }
@@ -131,10 +173,22 @@
 	padding: 0px !important;
 }
 
+.top-space {
+	padding-top: 10px;
+}
+
+.bottom-space {
+	padding-bottom: 10px;
+}
+
 /* elements */
 a {
 
 	text-decoration: none;
+}
+
+.all-width {
+	width: 100%;
 }
 
 .premiun:hover {
