@@ -37,7 +37,7 @@
 
 /* colors for the texts */
 .white-text {
-	color: #fff;
+	color: #fff !important;
 }
 
 .black-text {
