@@ -5,7 +5,7 @@
   <div class="center padding">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label all-width">
-        <%= f.label :email, "Correo electrónico", for:"user_email" ,class:"mdl-textfield__label medium-text" %><br />
+        <%= f.label :email, "Correo electrónico", for:"user_email", class:"mdl-textfield__label medium-text" %><br />
         <%= f.email_field :email, class:"mdl-textfield__input medium-text" %>
       </div>
 

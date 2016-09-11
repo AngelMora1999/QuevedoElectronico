@@ -11,62 +11,66 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
+    <%= f.label :title, "Título", for:"ad_title", class:"mdl-textfield__label medium-text" %>
+    <%= f.text_field :title, class:"mdl-textfield__input medium-text" %>
   </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
+    <%= f.label :description, "Desciption", for:"ad_description", class:"mdl-textfield__label medium-text" %>
+    <%= f.text_area :description, class:"mdl-textfield__input medium-text", type:"text", rows:"3" %>
   </div>
 
-  <div class="field">
-    <%= f.label :cover %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
+    <%= f.label :price, "Precio", for:"ad_precio", class:"mdl-textfield__label medium-text" %>
+    <%= f.number_field :price, class:"mdl-textfield__input medium-text" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
+    <h2 class="grey-text marine medium-text small-padding-left">Imagen de la publicación:</h2>
     <%= f.file_field :cover %>
   </div>
 
-  <div class="field">
-    <%= f.label :brand %>
-    <%= f.text_field :brand %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
+    <h2 class="grey-text marine medium-text small-padding-left">Marca del celular:</h2>
+    <%= f.select :brand, options_for_select([["Samsung", "Samsung", class:"medium-text"], ["LG", "LG", class:"medium-text"], ["Alcatel", "Alcatel", class:"medium-text"], ["Iphone", "Iphone", class:"medium-text"], ["Nokia", "Nokia", class:"medium-text"], ["HTC", "HTC", class:"medium-text"], ["Nexus", "Nexus", class:"medium-text"], ["Blackberry", "Blackberry", class:"medium-text"], ["Chino", "Chino", class:"medium-text"]]) %>
   </div>
 
-  <div class="field">
-    <%= f.label :price %>
-    <%= f.number_field :price %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
+    <h2 class="grey-text marine medium-text small-padding-left">Estado del celular:</h2>
+    <%= f.select :state, options_for_select([["Nuevo", "Nuevo", class:"medium-text"], ["Usado", "Usado", class:"medium-text"]]) %>
   </div>
 
-  <div class="field">
-    <%= f.label :state %>
-    <%= f.text_field :state %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
+    <h2 class="grey-text marine medium-text small-padding-left">Datos de contacto:</h2>
   </div>
 
-  <div class="field">
-    <%= f.label :region %>
-    <%= f.text_field :region %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
+    <%= f.label :city, "Ciudad", for:"ad_ciudad", class:"mdl-textfield__label medium-text" %>
+    <%= f.text_field :city, class:"mdl-textfield__input medium-text" %>
   </div>
 
-  <div class="field">
-    <%= f.label :city %>
-    <%= f.text_field :city %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
+    <%= f.label :region, "Provincia", for:"ad_region", class:"mdl-textfield__label medium-text" %>
+    <%= f.text_field :region, class:"mdl-textfield__input medium-text" %>
   </div>
 
-  <div class="field">
-    <%= f.label :cellphone %>
-    <%= text_field_tag "ad[cellphone]", "#{current_user.ads.last.cellphone if current_user.ads.last.nil? == false}" %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
+    <%= f.label :cellphone, "Celular", for:"ad_cellphone", class:"mdl-textfield__label medium-text" %>
+    <%= text_field_tag "ad[cellphone]", "#{current_user.ads.last.cellphone if current_user.ads.last.nil? == false}", class:"mdl-textfield__input medium-text" %>
   </div>
 
-  <div class="field">
-    <%= f.label :phone %>
-    <%= text_field_tag "ad[phone]", "#{current_user.ads.last.phone if current_user.ads.last.nil? == false}" %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
+    <%= f.label :phone, "Teléfono", for:"ad_phone", class:"mdl-textfield__label medium-text" %>
+    <%= text_field_tag "ad[phone]", "#{current_user.ads.last.phone if current_user.ads.last.nil? == false}", class:"mdl-textfield__input medium-text" %>
   </div>
 
-  <div class="field">
-    <%= f.label :adress %>
-    <%= text_field_tag "ad[adress]", "#{current_user.ads.last.adress if current_user.ads.last.nil? == false}" %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
+    <%= f.label :adress, "Dirección", for:"ad_adress", class:"mdl-textfield__label medium-text" %>
+    <%= text_field_tag "ad[adress]", "#{current_user.ads.last.adress if current_user.ads.last.nil? == false}", class:"mdl-textfield__input medium-text" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions bottom-space bottom-margin">
+    <%= f.submit "Enviar datos", class:"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect marine grey-text medium-text" %>
   </div>
 <% end %>
