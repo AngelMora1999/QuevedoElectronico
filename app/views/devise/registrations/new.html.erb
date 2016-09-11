@@ -6,27 +6,27 @@
         <%= devise_error_messages! %>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
-          <%= f.label :name, "Nombre completo", for:"user_name" ,class:"mdl-textfield__label" %><br />
-          <%= f.text_field :name, class:"mdl-textfield__input" %>
+          <%= f.label :name, "Nombre completo", for:"user_name" ,class:"mdl-textfield__label medium-text" %><br />
+          <%= f.text_field :name, class:"mdl-textfield__input medium-text" %>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
-          <%= f.label :email, "Correo electrónico", for:"user_email" ,class:"mdl-textfield__label" %><br />
-          <%= f.email_field :email, class:"mdl-textfield__input" %>
+          <%= f.label :email, "Correo electrónico", for:"user_email" ,class:"mdl-textfield__label medium-text" %><br />
+          <%= f.email_field :email, class:"mdl-textfield__input medium-text" %>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
-          <%= f.label :password, "Contraseña", for:"user_password" ,class:"mdl-textfield__label" %>
-          <%= f.password_field :password, autocomplete: "off", class:"mdl-textfield__input" %>
+          <%= f.label :password, "Contraseña (minimo 6 carácteres)", for:"user_password" ,class:"mdl-textfield__label medium-text" %>
+          <%= f.password_field :password, autocomplete: "off", class:"mdl-textfield__input medium-text" %>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
-          <%= f.label :password_confirmation, "Confirmar contraseña", for:"user_password_confirmation" ,class:"mdl-textfield__label" %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "off", class:"mdl-textfield__input" %>
+          <%= f.label :password_confirmation, "Confirmar contraseña", for:"user_password_confirmation" ,class:"mdl-textfield__label medium-text" %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off", class:"mdl-textfield__input medium-text" %>
         </div>
 
         <div class="actions bottom-space bottom-margin">
-          <%= f.submit "Registrarse", class:"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect marine white-text" %>
+          <%= f.submit "Registrarse", class:"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect marine grey-text medium-text" %>
         </div>
       <% end %>
       <%= render "devise/shared/links" %>

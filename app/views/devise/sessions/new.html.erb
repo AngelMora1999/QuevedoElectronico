@@ -5,24 +5,24 @@
   <div class="center padding">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label all-width">
-        <%= f.label :email, "Correo electrónico", for:"user_email" ,class:"mdl-textfield__label" %><br />
-        <%= f.email_field :email, class:"mdl-textfield__input" %>
+        <%= f.label :email, "Correo electrónico", for:"user_email" ,class:"mdl-textfield__label medium-text" %><br />
+        <%= f.email_field :email, class:"mdl-textfield__input medium-text" %>
       </div>
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  all-width">
-        <%= f.label :password, "Contraseña", for:"user_password" ,class:"mdl-textfield__label" %><br />
-        <%= f.password_field :password, autocomplete: "off", class:"mdl-textfield__input" %>
+        <%= f.label :password, "Contraseña", for:"user_password", class:"mdl-textfield__label medium-text" %><br />
+        <%= f.password_field :password, autocomplete: "off", class:"mdl-textfield__input medium-text" %>
       </div>
       
       <% if devise_mapping.rememberable? -%>
         <div class="field bottom-space">
           <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
+          <%= f.label :remember_me, class:"medium-text" %>
         </div>
       <% end -%>
 
       <div class="actions bottom-space bottom-margin">
-        <%= f.submit "Iniciar Sesion", class:"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect marine white-text" %>
+        <%= f.submit "Iniciar Sesion", class:"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect marine grey-text medium-text" %>
       </div>
     <% end %>
     <%= render "devise/shared/links" %>

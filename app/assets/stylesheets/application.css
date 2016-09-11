@@ -191,6 +191,10 @@ a {
 	width: 100%;
 }
 
+.actions .mdl-button:hover {
+	background-color: #37474F; 
+}
+
 .premiun:hover {
 	background-color: #FFD700;
 	color: white;

@@ -1,16 +1,21 @@
-<h2>Forgot your password?</h2>
+<div class="mdl-grid big-margin">
+  <div class="mdl-cell--4-col mdl-cell--middles white center">
+	  <h2 class="grey-text center-text marine small-padding">Olvidaste tu contraseña?</h2>
+	  <div class="center padding">
+	    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+		  <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label all-width">
+		    <%= f.label :email, "Correo electrónico", for:"user_email" ,class:"mdl-textfield__label medium-text" %><br />
+		    <%= f.email_field :email, class:"mdl-textfield__input medium-text" %>
+		  </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+		  <div class="actions bottom-space bottom-margin">
+		    <%= f.submit "Recuperar contraseña", class:"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect marine grey-text medium-text" %>
+		  </div>
+		<% end %>
+
+		<%= render "devise/shared/links" %>
+	</div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
