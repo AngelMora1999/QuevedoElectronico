@@ -1,3 +1,16 @@
+<% if user_signed_in? %>
+  <% if current_user == @ad.user %>
+    <div class="android-wear-band center-text marine medium-padding">
+      <div class="android-wear-band-text">
+        <%= link_to "Editar", edit_ad_path(@ad), class:"mdl-button mdl-js-button mdl-js-ripple-effect red white-text bold-text editar" %>
+        <% if !@ad.premiuned? && !@ad.toped? %>
+          <%= link_to "Vender rápido", @ad, class:"mdl-button mdl-js-button mdl-js-ripple-effect black white-text bold-text top", data: { confirm: "Su publicación sera clase Top y usted debera a Quevedo Electrónico $1, hasta que no pague no podra tener más publicaciones de clase Top" } %>
+          <%= link_to "Vender más rápido", @ad, class:"mdl-button mdl-js-button mdl-js-ripple-effect gold black-text bold-text premiun", data: { confirm: "Su publicación sera clase Premiun y usted debera a Quevedo Electrónico $2, hasta que no pague no podra tener más publicaciones de clase Premiun" } %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
 <div class="mdl-grid">
   <div class="mdl-cell--10-col mdl-cell--middles white center">
     <div class="mdl-grid mdl-grid--no-spacing">

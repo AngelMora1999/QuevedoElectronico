@@ -199,8 +199,18 @@ a {
 	background-color: #37474F; 
 }
 
+.editar:hover {
+	background-color: #f00;
+	color: white;
+}
+
 .premiun:hover {
 	background-color: #FFD700;
+	color: white;
+}
+
+.top:hover {
+	background-color: #000;
 	color: white;
 }
 
