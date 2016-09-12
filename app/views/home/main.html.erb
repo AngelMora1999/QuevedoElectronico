@@ -206,7 +206,7 @@
   <div class="mdl-cell mdl-cell--12-col">
     <%= render "partials/elements/banner-economicos" %>
     <div class="mdl-grid">
-    <% @ads.ultimos.economicos.activo.limit(4).each do |ad| %>
+    <% @ads.economicos.ultimos.activo.limit(4).each do |ad| %>
       <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
           <h2 class="mdl-card__title-text white-text back-tran thin-text small-padding"><%= ad.title %></h2>
@@ -410,7 +410,7 @@
   <div class="mdl-cell mdl-cell--12-col">
     <%= render "partials/elements/banner-caros" %>
     <div class="mdl-grid">
-    <% @ads.ultimos.caros.activo.limit(4).each do |ad| %>
+    <% @ads.caros.ultimos.activo.limit(4).each do |ad| %>
       <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
           <h2 class="mdl-card__title-text white-text back-tran thin-text small-padding"><%= ad.title %></h2>

@@ -85,11 +85,11 @@ class AdsController < ApplicationController
   end
 
   def economicos
-    @ads = Ad.all.ultimos.economicos.activo
+    @ads = Ad.all.economicos.ultimos.activo
   end
 
   def caros
-    @ads = Ad.all.ultimos.caros.activo
+    @ads = Ad.all.caros.ultimos.activo
   end
 
   def vendidos
