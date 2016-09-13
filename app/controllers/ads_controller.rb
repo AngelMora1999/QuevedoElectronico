@@ -1,6 +1,6 @@
 class AdsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
-  before_action :set_ad, only: [:show, :edit, :update, :destroy]
+  before_action :set_ad, only: [:show, :edit, :update, :destroy, :premiun, :top]
 
   # GET /ads
   # GET /ads.json
@@ -94,6 +94,17 @@ class AdsController < ApplicationController
 
   def vendidos
     @ads = Ad.all.selled.ultimos
+  end
+
+  #Metodos para AASM
+  def premiun
+    @ad.premiun!
+    redirect_to @ad
+  end
+
+  def top
+    @ad.top!
+    redirect_to @ad
   end
 
   private

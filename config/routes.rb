@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get "/caros", to: "ads#caros"
   get "/vendidos", to: "ads#vendidos"
 
+  put "/ads/:id/premiun", to: "ads#premiun"
+  put "/ads/:id/top", to: "ads#top"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   devise_for :users, controllers:{
