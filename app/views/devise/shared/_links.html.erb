@@ -1,5 +1,5 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Iniciar Sesion", new_session_path(resource_name), class:"medium-text marine-text bottom-margin" %><br />
+  <%= link_to "Iniciar Sesión", new_session_path(resource_name), class:"medium-text marine-text bottom-margin" %><br />
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
@@ -20,6 +20,6 @@
 
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Entrar con #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), class:"mdl-button mdl-js-button mdl-js-ripple-effect facebook white-text bold-text editar bottom-margin" %><br />
+    <%= link_to "Entrar con #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), class:"mdl-button mdl-js-button mdl-js-ripple-effect facebook white-text bold-text bottom-margin" %><br />
   <% end -%>
 <% end -%>
