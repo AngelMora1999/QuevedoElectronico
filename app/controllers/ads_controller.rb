@@ -1,6 +1,6 @@
 class AdsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
-  before_action :set_ad, only: [:show, :edit, :update, :destroy, :premiun, :top]
+  before_action :set_ad, only: [:show, :edit, :update, :destroy, :premiun, :top, :sell]
 
   # GET /ads
   # GET /ads.json
@@ -104,6 +104,11 @@ class AdsController < ApplicationController
 
   def top
     @ad.top!
+    redirect_to @ad
+  end
+  
+  def sell
+    @ad.sell!
     redirect_to @ad
   end
 

@@ -2,10 +2,15 @@
   <% if current_user == @ad.user %>
     <div class="android-wear-band center-text marine medium-padding">
       <div class="android-wear-band-text">
-        <%= link_to "Editar", edit_ad_path(@ad), class:"mdl-button mdl-js-button mdl-js-ripple-effect red white-text bold-text editar" %>
-        <% if !@ad.premiuned? && !@ad.toped? %>
+        <% if !@ad.selled? %>
+          <%= link_to "Editar", edit_ad_path(@ad), class:"mdl-button mdl-js-button mdl-js-ripple-effect red white-text bold-text editar" %>
+        <% end %>
+        <% if !@ad.premiuned? && !@ad.toped? && !@ad.selled? %>
           <%= link_to "Vender rápido", "/ads/#{@ad.id}/top", class:"mdl-button mdl-js-button mdl-js-ripple-effect black white-text bold-text top", method: :put %>
           <%= link_to "Vender más rápido", "/ads/#{@ad.id}/premiun", class:"mdl-button mdl-js-button mdl-js-ripple-effect gold black-text bold-text premiun", method: :put %>
+        <% end %>
+        <% if !@ad.selled? %>
+          <%= link_to "Ya lo vendi!", "/ads/#{@ad.id}/sell", class:"mdl-button mdl-js-button mdl-js-ripple-effect red white-text bold-text editar", method: :put %>
         <% end %>
       </div>
     </div>

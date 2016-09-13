@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   put "/ads/:id/premiun", to: "ads#premiun"
   put "/ads/:id/top", to: "ads#top"
+  put "/ads/:id/sell", to: "ads#sell"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
