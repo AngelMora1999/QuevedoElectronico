@@ -2,6 +2,9 @@
   <% if current_user == @ad.user %>
     <div class="android-wear-band center-text marine medium-padding">
       <div class="android-wear-band-text">
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect green-light white-text bold-text float-right enventa vc">
+          Visitas totales: <i class="material-icons">remove_red_eye</i> <%= @ad.visit_count %>
+        </button>
         <% if !@ad.selled? %>
           <%= link_to "Editar", edit_ad_path(@ad), class:"mdl-button mdl-js-button mdl-js-ripple-effect red white-text bold-text editar" %>
         <% end %>
@@ -25,11 +28,14 @@
       <div class="mdl-cell--8-col mdl-cell--middles">
         <div class="demo-card-wide mdl-card mdl-shadow--2dp all-width all-height">
           <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text back-tran thin-text"><%= @ad.title %></h2>
+            <h2 class="mdl-card__title-text back-tran thin-text"><i class="material-icons">label_outline</i> <%= @ad.title %></h2>
           </div>
           <div class="mdl-card__supporting-text black-text bold-text">
             <h6 class="mdl-card__title-text inline-block"><i class="material-icons">attach_money</i><%= @ad.price %>
             </h6>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect green-light white-text bold-text float-right marine vc">
+              <i class="material-icons">remove_red_eye</i> <%= @ad.visit_count %>
+            </button>
             <% if @ad.selled? == false %>
               <button class="mdl-button mdl-js-button mdl-js-ripple-effect green-light white-text bold-text float-right enventa">
                   En venta
@@ -41,22 +47,22 @@
             <% end %>
           </div>
           <div class="mdl-card__supporting-text">
-            <h6 class="medium-text"><%= @ad.description %></h6>
+            <h6 class="medium-text"><i class="material-icons">comment</i> <%= @ad.description %></h6>
           </div>
           <div class="mdl-card__supporting-text">
-            <h6 class="medium-text">Marca: <%= @ad.brand %></h6>
+            <h6 class="medium-text"><i class="material-icons">clear_all</i> Marca: <%= @ad.brand %></h6>
           </div>
           <div class="mdl-card__supporting-text">
-            <h6 class="medium-text">Estado: <%= @ad.state %></h6>
+            <h6 class="medium-text"><i class="material-icons">import_exporte</i> Estado: <%= @ad.state %></h6>
           </div>
           <div class="mdl-card__supporting-text">
-            <h6 class="black-text medium-text bold-text">Datos del vendedor:</h6>
-            <h6 class="medium-text"><%= @ad.user.name %></h6>
-            <h6 class="medium-text"><%= @ad.user.email %></h6>
+            <h6 class="black-text medium-text bold-text"><i class="material-icons">portrait</i> Datos del vendedor:</h6>
+            <h6 class="medium-text"><i class="material-icons">perm_identity</i> <%= @ad.user.name %></h6>
+            <h6 class="medium-text"><i class="material-icons">contact_mail</i> <%= @ad.user.email %></h6>
             <h6 class="medium-text">
-              <i class="material-icons">smartphone</i>
+              <i class="material-icons">contact_phone</i>
               <%= @ad.cellphone %>
-              <i class="material-icons small-padding-left">phone</i>
+              <i class="material-icons small-padding-left">contact_phone</i>
               <%= @ad.phone %>
             </h6>
           </div>
