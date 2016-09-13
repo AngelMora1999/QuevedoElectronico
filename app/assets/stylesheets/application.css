@@ -103,6 +103,10 @@
 	background-color: #37474F;
 }
 
+.facebook {
+	background-color: #3b5998;
+}
+
 /* floats */
 .float-right {
 	float: right;
@@ -224,4 +228,8 @@ a {
 
 .marine:hover {
 	background-color: #37474F; 
+}
+
+.facebook:hover {
+	background-color: #3b5998;
 }
