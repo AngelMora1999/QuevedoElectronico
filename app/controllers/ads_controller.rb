@@ -21,6 +21,10 @@ class AdsController < ApplicationController
 
   # GET /ads/1/edit
   def edit
+    if current_user == @ad.user || current_user.is_admin?
+    else
+      redirect_to premiun_path, notice: "Usted no es el dueño de la publicación"
+    end
   end
 
   # POST /ads

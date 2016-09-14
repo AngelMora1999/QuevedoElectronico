@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <% if current_user == @ad.user %>
+  <% if current_user == @ad.user || current_user.is_admin? %>
     <div class="android-wear-band center-text marine medium-padding">
       <div class="android-wear-band-text">
         <button class="mdl-button mdl-js-button mdl-js-ripple-effect green-light white-text bold-text float-right enventa vc">
@@ -14,6 +14,9 @@
         <% end %>
         <% if !@ad.selled? %>
           <%= link_to "Ya lo vendi!", "/ads/#{@ad.id}/sell", class:"mdl-button mdl-js-button mdl-js-ripple-effect red white-text bold-text editar", method: :put %>
+        <% end %>
+        <% if current_user.is_admin? %>
+          <%= link_to "Eliminar!", @ad, class:"mdl-button mdl-js-button mdl-js-ripple-effect red white-text bold-text editar", method: :delete %>
         <% end %>
       </div>
     </div>
