@@ -23,6 +23,13 @@
 class Ad < ApplicationRecord
   belongs_to :user
   before_save :set_visit_count
+  validates_presence_of :title, message: "El título no puede estar vacío."
+  validates_presence_of :description, message: "La descripción no puede estar vacía."
+  validates_presence_of :price, message: "El precio no puede estar vacío."
+  validates_presence_of :brand, message: "La marca no puede estar vacía."
+  validates_presence_of :state, message: "El estado no puede estar vacío."
+  validates_presence_of :cellphone, message: "Debe llenar al menos un número de contacto."
+  validates_presence_of :adress, message: "Debe dar una dirección de contacto"
   has_attached_file :cover, styles: { medium: "400*400", thumb: "200*200" }, default_url: "http://hispanoracing.com/recurso/imagen/noDisponible.jpg"
   validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/
 
