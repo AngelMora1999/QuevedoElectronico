@@ -26,6 +26,7 @@ class Ad < ApplicationRecord
   validates_presence_of :title, message: "El título no puede estar vacío."
   validates_presence_of :description, message: "La descripción no puede estar vacía."
   validates_presence_of :price, message: "El precio no puede estar vacío."
+  validates_presence_of :cover, message: "La publicación debe tener una imagen."
   validates_presence_of :brand, message: "La marca no puede estar vacía."
   validates_presence_of :state, message: "El estado no puede estar vacío."
   validates_presence_of :cellphone, message: "Debe llenar al menos un número de contacto."
