@@ -49,7 +49,7 @@
 }
 
 .grey-text {
-	color: #64FFDA;
+	color: #64FFDA !important;
 }
 
 .marine-text {
@@ -85,6 +85,10 @@
 
 .black-fondo {
 	background-color: rgba(0,0,0,.04);
+}
+
+.back-tran {
+	background-color: rgba(0,0,0,.7);
 }
 
 .white {
@@ -183,6 +187,10 @@
 
 .bottom-space {
 	padding-bottom: 10px;
+}
+
+.text-padding {
+	padding: 10px 10px;
 }
 
 /* elements */

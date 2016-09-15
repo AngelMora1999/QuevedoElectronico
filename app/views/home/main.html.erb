@@ -5,7 +5,9 @@
     <% @ads.ultimos.premiuns.limit(8).each do |ad| %>
       <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
-          <h2 class="mdl-card__title-text white-text back-tran thin-text small-padding"><%= ad.title %></h2>
+          <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
+            <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
+          <% end %>
         </div>
         <div class="mdl-card__supporting-text justify-text">
           <h5><%= truncate(ad.description, length: 100) %></h5>
@@ -73,7 +75,9 @@
     <% @ads.ultimos.tops.limit(8).each do |ad| %>
       <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
-          <h2 class="mdl-card__title-text white-text back-tran thin-text small-padding"><%= ad.title %></h2>
+          <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
+            <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
+          <% end %>
         </div>
         <div class="mdl-card__supporting-text justify-text">
           <h5><%= truncate(ad.description, length: 100) %></h5>
@@ -141,7 +145,9 @@
     <% @ads.populares.ultimos.activo.limit(4).each do |ad| %>
       <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
-          <h2 class="mdl-card__title-text white-text back-tran thin-text small-padding"><%= ad.title %></h2>
+          <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
+            <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
+          <% end %>
         </div>
         <div class="mdl-card__supporting-text justify-text">
           <h5><%= truncate(ad.description, length: 100) %></h5>
@@ -209,7 +215,9 @@
     <% @ads.economicos.ultimos.activo.limit(4).each do |ad| %>
       <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
-          <h2 class="mdl-card__title-text white-text back-tran thin-text small-padding"><%= ad.title %></h2>
+          <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
+            <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
+          <% end %>
         </div>
         <div class="mdl-card__supporting-text justify-text">
           <h5><%= truncate(ad.description, length: 100) %></h5>
@@ -277,7 +285,9 @@
     <% @ads.ultimos.nuevos.activo.limit(4).each do |ad| %>
       <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
-          <h2 class="mdl-card__title-text white-text back-tran thin-text small-padding"><%= ad.title %></h2>
+          <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
+            <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
+          <% end %>
         </div>
         <div class="mdl-card__supporting-text justify-text">
           <h5><%= truncate(ad.description, length: 100) %></h5>
@@ -345,7 +355,9 @@
     <% @ads.ultimos.usados.activo.limit(4).each do |ad| %>
       <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
-          <h2 class="mdl-card__title-text white-text back-tran thin-text small-padding"><%= ad.title %></h2>
+          <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
+            <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
+          <% end %>
         </div>
         <div class="mdl-card__supporting-text justify-text">
           <h5><%= truncate(ad.description, length: 100) %></h5>
@@ -413,7 +425,9 @@
     <% @ads.caros.ultimos.activo.limit(4).each do |ad| %>
       <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
-          <h2 class="mdl-card__title-text white-text back-tran thin-text small-padding"><%= ad.title %></h2>
+          <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
+            <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
+          <% end %>
         </div>
         <div class="mdl-card__supporting-text justify-text">
           <h5><%= truncate(ad.description, length: 100) %></h5>
@@ -481,7 +495,9 @@
     <% @ads.selled.ultimos.limit(4).each do |ad| %>
       <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
-          <h2 class="mdl-card__title-text white-text back-tran thin-text small-padding"><%= ad.title %></h2>
+          <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
+            <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
+          <% end %>
         </div>
         <div class="mdl-card__supporting-text justify-text">
           <h5><%= truncate(ad.description, length: 100) %></h5>
