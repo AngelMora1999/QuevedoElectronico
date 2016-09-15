@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/economicos", to: "ads#economicos"
   get "/caros", to: "ads#caros"
   get "/vendidos", to: "ads#vendidos"
+  get "/recientes", to: "ads#index"
 
   put "/ads/:id/premiun", to: "ads#premiun"
   put "/ads/:id/top", to: "ads#top"
