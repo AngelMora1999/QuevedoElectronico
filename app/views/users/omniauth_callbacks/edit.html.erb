@@ -1,27 +1,40 @@
-<%= form_tag "/custom_sign_up", method: :post do %>
-  <ul>
-    <% @user.errors.full_messages.each do |error| %>
-      <li>
-        <%= error %>
-      </li>
-    <% end %>
-  </ul>
-  <div>
-    <%= label_tag "user_email", "Correo Electronico" %> 
-    <%= email_field_tag "user[email]", @user.email, required: true %>
-  </div>
-  <div>
-    <%= label_tag "user_name", "Nombre Completo" %>      
-    <%= text_field_tag "user[name]", @user.name %>
-  </div>
-  <div>
-    <%= text_field_tag "user[provider]", @user.provider %>
-  </div>
-  <div>
-    <%= text_field_tag "user[uid]", @user.uid %>
-  </div>
-  <div>
-      <%= submit_tag 'Completar Registro' %>
-  </div>
-<% end %>
+<div class="mdl-grid big-margin">
+  <div class="mdl-cell--4-col mdl-cell--middles white center">
+    <h2 class="grey-text center-text marine small-padding">Completar datos</h2>
+    <div class="center padding">
+      <%= form_tag "/custom_sign_up", method: :post do %>
+        <ul>
+          <% @user.errors.full_messages.each do |error| %>
+            <li>
+              <%= error %>
+            </li>
+          <% end %>
+        </ul>
+        
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label all-width">
+          <%= label_tag "user_email", "Correo electrónico", class:"mdl-textfield__label medium-text" %> 
+          <%= email_field_tag "user[email]", @user.email, required: true, class:"mdl-textfield__input medium-text" %>
+        </div>
 
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label all-width">
+          <%= label_tag "user_name", "Nombre completo", class:"mdl-textfield__label medium-text" %>      
+          <%= text_field_tag "user[name]", @user.name, class:"mdl-textfield__input medium-text" %>
+        </div>
+        
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label all-width">
+          <%= label_tag "user_provider", "Provedor:", class:"mdl-textfield__label medium-text" %>
+          <%= text_field_tag "user[provider]", @user.provider, class:"mdl-textfield__input medium-text", disabled:"" %>
+        </div>
+        
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label all-width">
+          <%= label_tag "user_uid", "Uid:", class:"mdl-textfield__label medium-text" %>
+          <%= text_field_tag "user[uid]", @user.uid, class:"mdl-textfield__input medium-text", disabled:"" %>
+        </div>
+        
+        <div class="actions bottom-space bottom-margin">
+          <%= submit_tag "Completar registro", class:"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect marine grey-text medium-text" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
