@@ -3,7 +3,7 @@
     <%= render "partials/elements/banner-premiuns" %>
     <div class="mdl-grid">
     <% @ads.ultimos.premiuns.limit(8).each do |ad| %>
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
           <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
             <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
@@ -73,7 +73,7 @@
     <%= render "partials/elements/banner-tops" %>
     <div class="mdl-grid">
     <% @ads.ultimos.tops.limit(8).each do |ad| %>
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
           <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
             <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
@@ -143,7 +143,7 @@
     <%= render "partials/elements/banner-populares" %>
     <div class="mdl-grid">
     <% @ads.populares.ultimos.activo.limit(4).each do |ad| %>
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
           <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
             <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
@@ -213,7 +213,7 @@
     <%= render "partials/elements/banner-economicos" %>
     <div class="mdl-grid">
     <% @ads.economicos.ultimos.activo.limit(4).each do |ad| %>
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
           <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
             <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
@@ -283,7 +283,7 @@
     <%= render "partials/elements/banner-nuevos" %>
     <div class="mdl-grid">
     <% @ads.ultimos.nuevos.activo.limit(4).each do |ad| %>
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
           <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
             <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
@@ -353,7 +353,7 @@
     <%= render "partials/elements/banner-usados" %>
     <div class="mdl-grid">
     <% @ads.ultimos.usados.activo.limit(4).each do |ad| %>
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
           <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
             <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
@@ -423,7 +423,7 @@
     <%= render "partials/elements/banner-caros" %>
     <div class="mdl-grid">
     <% @ads.caros.ultimos.activo.limit(4).each do |ad| %>
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
           <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
             <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
@@ -493,7 +493,7 @@
     <%= render "partials/elements/banner-vendidos" %>
     <div class="mdl-grid">
     <% @ads.selled.ultimos.limit(4).each do |ad| %>
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
           <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
             <h2 class="mdl-card__title-text"><%= truncate(ad.title, length: 20) %></h2>
