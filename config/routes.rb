@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   put "/ads/:id/sell", to: "ads#sell"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "/dashboard", to: "home#dashboard"
 
   devise_for :users, controllers:{
     omniauth_callbacks: "users/omniauth_callbacks",
