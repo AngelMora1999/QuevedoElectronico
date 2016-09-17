@@ -9,6 +9,8 @@ class HomeController < ApplicationController
   end
 
   def dashboard
+    @users = User.all
+    @ads = Ad.all
   end
   
   protected

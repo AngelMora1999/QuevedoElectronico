@@ -1,0 +1,48 @@
+<div class="android-wear-band center-text marine medium-padding">
+  <div class="android-wear-band-text">
+    <%= link_to "#", class:"mdl-button mdl-js-button mdl-js-ripple-effect enventa black-text bold-text" do %>
+      Usuarios:
+      <%= @users.count %>
+    <% end %>
+
+    <%= link_to "#", class:"mdl-button mdl-js-button mdl-js-ripple-effect facebook white-text bold-text" do %>
+      Usuarios de Facebook:
+      <%= @users.facebook.count %>
+    <% end %>
+
+    <%= link_to "#", class:"mdl-button mdl-js-button mdl-js-ripple-effect white black-text bold-text" do %>
+      Publicaciones:
+      <%= @ads.count %>
+    <% end %>
+
+    <%= link_to "#", class:"mdl-button mdl-js-button mdl-js-ripple-effect gold black-text bold-text premiun" do %>
+      Publicaciones Premiun:
+      <%= @ads.premiuns.count %>
+    <% end %>
+
+    <%= link_to "#", class:"mdl-button mdl-js-button mdl-js-ripple-effect black white-text bold-text top" do %>
+      Publicaciones Top:
+      <%= @ads.tops.count %>
+    <% end %>
+
+    <%= link_to "#", class:"mdl-button mdl-js-button mdl-js-ripple-effect white black-text bold-text" do %>
+      Publicaciones Normales:
+      <%= @ads.published.count %>
+    <% end %>
+
+    <%= link_to "#", class:"mdl-button mdl-js-button mdl-js-ripple-effect red white-text bold-text vendido" do %>
+      Publicaciones Vendidas:
+      <%= @ads.selled.count %>
+    <% end %>
+
+    <%= link_to "#", class:"mdl-button mdl-js-button mdl-js-ripple-effect white-text bold-text enventa" do %>
+      Celulares Nuevos:
+      <%= @ads.nuevos.count %>
+    <% end %>
+
+    <%= link_to "#", class:"mdl-button mdl-js-button mdl-js-ripple-effect red white-text bold-text vendido" do %>
+      Celulares Usados:
+      <%= @ads.usados.count %>
+    <% end %>
+  </div>
+</div>

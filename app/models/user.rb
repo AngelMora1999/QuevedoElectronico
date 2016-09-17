@@ -47,6 +47,9 @@ class User < ApplicationRecord
     end
   end
 
+  #Scopes for the users
+  scope :facebook, ->{ where(provider:"facebook") }
+
   #Funcion para verificar si !existe el usuario login con facebook => crea un usuario
   def self.from_omniauth(auth)
     where(provider: auth[:provider], uid: auth[:uid] ).first_or_create do |user|

@@ -111,6 +111,10 @@
 	background-color: #3b5998;
 }
 
+.enventa {
+	background-color: #00FF66;
+}
+
 /* floats */
 .float-right {
 	float: right;
