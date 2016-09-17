@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <title>Quevedo Electrónico</title>
     <%= csrf_meta_tags %>
@@ -13,10 +13,10 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <%= render "partials/header/nav_tab" %>
       <%= render "partials/elements/drawer" %>
-     <div class="android-content mdl-layout__content black-fondo">
-      <%= yield %>
-      <%= render "partials/footer" %>
-     </div>
+      <div class="android-content mdl-layout__content black-fondo">
+        <%= yield %>
+        <%= render "partials/footer" %>
+      </div>
     </div>
   </body>
 </html>
