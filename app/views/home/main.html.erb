@@ -1,5 +1,8 @@
 <div class="mdl-grid mdl-grid--no-spacing">
   <div class="mdl-cell mdl-cell--12-col">
+    <%= render "partials/elements/banner-home" %>
+  </div>  
+  <div class="mdl-cell mdl-cell--12-col">
     <%= render "partials/elements/banner-premiuns" %>
     <div class="mdl-grid">
     <% @ads.ultimos.premiuns.limit(8).each do |ad| %>
