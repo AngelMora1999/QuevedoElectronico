@@ -21,5 +21,12 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  database: quevedo_electronico_db
+  password: AngelMora123
+  username: root
+  host: 127.0.0.1
+  port: 3306
+  pool: 5
+  timeout: 5000 
+  encoding: utf8
