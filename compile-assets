@@ -1,0 +1,4 @@
+rm -rf public/assets
+rake assets:clean RAILS_ENV=production
+rake assets:precompile RAILS_ENV=production
+chmod -R 777 public/assets

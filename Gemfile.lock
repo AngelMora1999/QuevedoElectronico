@@ -216,7 +216,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  mysql2 (~> 0.3.9)
+  mysql2
   omniauth-facebook
   paperclip (~> 4.3, >= 4.3.6)
   puma (~> 3.0)
@@ -231,4 +231,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.12.5
+   1.13.1
