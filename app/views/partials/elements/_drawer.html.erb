@@ -3,7 +3,7 @@
 <nav class="mdl-navigation">
       <%= link_to root_path, class:"mdl-navigation__link" do %>
         <i class="material-icons">home</i>
-        Home
+        Inicio
       <% end %>
       <% if user_signed_in? %>
         <%= link_to destroy_user_session_path, method: :delete, class:"mdl-navigation__link" do %>
