@@ -1,13 +1,4 @@
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- all_website -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3259870721197682"
-     data-ad-slot="1431273853"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<%= render "partials/elements/google" %>
 <%= render "partials/elements/banner-myads" %>
 <div class="mdl-grid">
 <% current_user.ads.ultimos.each do |ad| %>
@@ -76,3 +67,4 @@
   </div>
 <% end %>
 </div>
+<%= render "partials/elements/google" %>
