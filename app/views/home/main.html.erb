@@ -17,7 +17,7 @@
   <div class="mdl-cell mdl-cell--12-col">
     <%= render "partials/elements/banner-premiuns" %>
     <div class="mdl-grid">
-    <% @ads.ultimos.premiuns.limit(8).each do |ad| %>
+    <% @ads.ultimos.premiuns.limit(4).each do |ad| %>
       <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
           <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
@@ -90,7 +90,7 @@
   <div class="mdl-cell mdl-cell--12-col">
     <%= render "partials/elements/banner-tops" %>
     <div class="mdl-grid">
-    <% @ads.ultimos.tops.limit(8).each do |ad| %>
+    <% @ads.ultimos.tops.limit(4).each do |ad| %>
       <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
         <div class="mdl-card__title" style="background-image: url(<%= ad.cover.url(:thumb) %>);">
           <%= link_to ad, class:"mdl-card__title-text white-text marine grey-text thin-text text-padding" do %>
