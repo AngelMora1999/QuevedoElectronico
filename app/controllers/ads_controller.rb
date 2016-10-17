@@ -100,6 +100,10 @@ class AdsController < ApplicationController
     @ads = Ad.all.selled.ultimos
   end
 
+  #Publicidad
+  def publicidad
+  end
+
   #Metodos para AASM
   def premiun
     @ad.premiun!
