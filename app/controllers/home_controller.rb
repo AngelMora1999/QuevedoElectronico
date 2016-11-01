@@ -12,7 +12,10 @@ class HomeController < ApplicationController
     @users = User.all
     @ads = Ad.all
   end
-  
+
+  def download
+  end
+
   protected
   def set_layout
     return "landing" if action_name == "main"

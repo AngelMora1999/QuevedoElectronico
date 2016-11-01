@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "/vendidos", to: "ads#vendidos"
   get "/recientes", to: "ads#index"
   get "/informativo", to: "ads#publicidad"
+  get "/encuesta", to: "home#download"
 
   put "/ads/:id/premiun", to: "ads#premiun"
   put "/ads/:id/top", to: "ads#top"
